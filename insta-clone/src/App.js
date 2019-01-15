@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 
-// import SearchBar from '.components/SearchBar/SearchBar';
+import SearchBar from './components/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import dummyData from './dummy-data';
 import './App.css';
+
+
+
+
+
+
+
+
+
 
 class App extends Component {
   constructor() {
@@ -16,20 +25,10 @@ class App extends Component {
   }
 
 
-
-
-
-
-
-
-
-
-
-
   render() {
     return (
       <div className="App">
-       {/* <SearchBar /> */}
+       <SearchBar />
         <PostContainer info={this.state.dummyInfo} />
        
       
