@@ -4,13 +4,17 @@ import './SearchBar.css'
 
 function SearchBar(props) {
     return (
-        <div>
+        <div className="searchBar">
 
-           <div className="searchBar">
+          
+           <div className="insta">
             <i class="fab fa-instagram"></i>
             {/* <p> | </p> */}
-            <img  src="https://miro.medium.com/max/960/1*XwGT5sRK8L-lYPMeQkUgog.png" width="100"/>
-           </div>
+            
+
+            <img  src="https://miro.medium.com/max/960/1*XwGT5sRK8L-lYPMeQkUgog.png" width="100" alt="instaimg" />
+            </div>
+         
 
            <div>
             <input type="text" class="searchTerm" placeholder="Search"></input>

@@ -1,10 +1,11 @@
 import React from 'react'
+import './PostContainer.css'
 
 import CommentContainer from '../CommentContainer/CommentContainer'
 
 function Post(props) {
     return (
-      <div>
+      <div className="post">
         <div> 
             <img src={props.post.thumbnailUrl} alt="thumbnail" />
             <p>{props.post.username}</p>
@@ -25,10 +26,15 @@ function Post(props) {
 
         <CommentContainer comment={props.post.comments} />
 
-        <p>{props.post.timestap}</p>
-        </div> // end div
+
+        <p>{props.post.timestamp}</p>
+        
   
-  
+          <form>
+          <input type="text"  placeholder="Add a comment..."></input>
+         </form>
+
+         </div> // end div
     )}
 
   export default Post;
