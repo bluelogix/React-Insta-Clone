@@ -3,22 +3,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import Comments from './Comments'
 
-// function CommentContainer(props) {
-//     return (
-//         <div>
-//             {props.comment.map(comment=> {
-//                 return <Comments key={comment.text} comment={comment} />
-//             })}
-//         </div>
-//     )
-// }
 
-// CommentContainer.propTypes = {
-//     comment: PropTypes.array
-// }
-
-
-// export default CommentContainer;
 
 
 class CommentSection extends Component {
@@ -32,11 +17,7 @@ class CommentSection extends Component {
         }
     }
 
-    // componentDidMount() {
-    //     console.log('mounting')
-    //     this.setState({comment: this.props.comments})
-
-    //   }
+   
     
 
 

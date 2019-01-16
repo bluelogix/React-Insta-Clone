@@ -30,10 +30,7 @@ function Post(props) {
         <p>{props.post.timestamp}</p>
         
   
-          {/* <form onSubmit={props.addNewComment}>
-          <input value={props.addComment} onChange={props.handleChanges} name="addComment" type="text"  placeholder="Add a comment..." />
-         </form> */}
-
+  
          </div> // end div
     )}
 

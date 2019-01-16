@@ -10,7 +10,7 @@ function PostContainer(props) {
     return (
         <div>
             {props.info.map(post => {
-                return <Post key={post.username} post={post} />
+                return <Post key={post.imageUrl} post={post} />
             
             })}
 
