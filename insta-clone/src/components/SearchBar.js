@@ -8,7 +8,7 @@ function SearchBar(props) {
 
           
            <div className="insta">
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i>
             {/* <p> | </p> */}
             
 
@@ -17,16 +17,16 @@ function SearchBar(props) {
          
 
            <div>
-            <input type="text" class="searchTerm" placeholder="Search"></input>
-                <button type="submit" class="searchButton">
-                    <i class="fa fa-search"></i>
+            <input type="text" className="searchTerm" placeholder="Search"></input>
+                <button type="submit" className="searchButton">
+                    <i className="fa fa-search"></i>
                 </button>
            </div>
 
             <div>
-                <i class="far fa-compass"></i>
-                <i class="far fa-heart"></i>
-                <i class="far fa-user"></i>
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
              </div>
 
         </div> // End Div

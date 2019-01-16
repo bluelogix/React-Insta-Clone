@@ -21,18 +21,39 @@ class App extends Component {
 
       this.state = {
         dummyInfo: dummyData,
+        addSearch: []
       }
   }
+
+  
+  
+  // addNewSearch = e => {
+  //   let addSearch = this.state.dummyInfo
+  //   let searchUser = addSearch.filter(user => {
+  //    return user.username
+  //   }
+  //     this.setState({
+  //       addSearch: searchUser })
+  // }
+
 
   componentDidMount() {
     console.log('did mount?')
     this.setState({dummyInfo: dummyData})
   }
 
+
+
+
+
+
+
+
+
   render() {
     return (
       <div className="App">
-       <SearchBar />
+       <SearchBar search={this.addNewSearch} />
         <PostContainer info={this.state.dummyInfo} />
        
       

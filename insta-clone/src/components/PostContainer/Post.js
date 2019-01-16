@@ -1,13 +1,13 @@
 import React from 'react'
 import './PostContainer.css'
 
-import CommentContainer from '../CommentContainer/CommentContainer'
+import CommentSection from '../CommentContainer/CommentSection'
 
 function Post(props) {
     return (
       <div className="post">
         <div> 
-            <img src={props.post.thumbnailUrl} alt="thumbnail" />
+            <img className="thumbimg" src={props.post.thumbnailUrl} alt="thumbnail" />
             <p>{props.post.username}</p>
         </div>
 
@@ -16,23 +16,23 @@ function Post(props) {
         </div>
 
         <div>
-        <i class="far fa-heart"></i>
-        <i class="far fa-comment"></i>
+        <i className="far fa-heart"></i>
+        <i className="far fa-comment"></i>
         </div>
 
         <p>{props.post.likes} likes</p>
 
 
 
-        <CommentContainer comment={props.post.comments} />
+        <CommentSection  comments={props.post.comments} />
 
 
         <p>{props.post.timestamp}</p>
         
   
-          <form>
-          <input type="text"  placeholder="Add a comment..."></input>
-         </form>
+          {/* <form onSubmit={props.addNewComment}>
+          <input value={props.addComment} onChange={props.handleChanges} name="addComment" type="text"  placeholder="Add a comment..." />
+         </form> */}
 
          </div> // end div
     )}

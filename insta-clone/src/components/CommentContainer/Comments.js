@@ -7,7 +7,9 @@ function Comments(props) {
       <div>
            {props.comment.username}
           <p> {props.comment.text}</p>
-           
+          
+
+
         </div> // end div
   
   
