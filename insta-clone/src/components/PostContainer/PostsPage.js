@@ -21,20 +21,25 @@ class PostsPage extends Component {
 
       this.state = {
         dummyInfo: dummyData,
-        addSearch: []
+        search: []
       }
   }
 
-  
-  
-  // addNewSearch = e => {
-  //   let addSearch = this.state.dummyInfo
-  //   let searchUser = addSearch.filter(user => {
-  //    return user.username
-  //   }
-  //     this.setState({
-  //       addSearch: searchUser })
+  // handleSearch = e => {
+    // this.setState({ })
   // }
+  
+  addNewSearch = e => {
+    console.log(e)
+    let dummyInfo = this.state.dummyInfo.filter(p => {
+      if(p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    
+      this.setState({
+        search: dummyInfo })
+  }
 
 
   componentDidMount() {
@@ -52,10 +57,10 @@ class PostsPage extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div >
 
-            <SearchBar  />
-            <PostContainer info={this.state.dummyInfo} />
+            <SearchBar  addSearch={this.addSearch} />
+            <PostContainer  dummyInfo={this.state.search.length > 0 ? this.state.search : this.state.dummyInfo} info={this.state.dummyInfo} />
       
       </div>
     );

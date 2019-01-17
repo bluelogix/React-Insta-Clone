@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import PostsPage from './components/PostContainer/PostsPage'
+import PostsPage from './components/PostContainer/PostsPage';
+import authenticate from './components/Authentication/authenticate'
+import LoginPage from './components/Login/Login'
 
 import './App.css';
 
@@ -38,4 +40,4 @@ class App extends Component {
 
 
 
-export default App;
+export default authenticate(PostsPage)(LoginPage);

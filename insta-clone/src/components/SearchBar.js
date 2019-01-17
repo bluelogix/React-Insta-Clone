@@ -17,7 +17,12 @@ function SearchBar(props) {
          
 
            <div>
-            <input type="text" className="searchTerm" placeholder="Search"></input>
+            <input 
+             type="text"
+             className="searchTerm" 
+             placeholder="Search" 
+             value={props.addSearch}/>
+             
                 <button type="submit" className="searchButton">
                     <i className="fa fa-search"></i>
                 </button>
