@@ -4,8 +4,8 @@ import React from 'react';
 
 const authenticate = PostsPage => LoginPage => 
     class extends React.Component {
-        constructor() {
-            super();
+        constructor(props) {
+            super(props);
                 this.state = {
                     loggedIn: false
                 }

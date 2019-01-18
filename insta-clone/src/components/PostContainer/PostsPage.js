@@ -20,7 +20,7 @@ class PostsPage extends Component {
     super();
 
       this.state = {
-        dummyInfo: dummyData,
+        dummyInfo: [],
         search: []
       }
   }
@@ -30,7 +30,7 @@ class PostsPage extends Component {
   // }
   
   addNewSearch = e => {
-    console.log(e)
+    console.log()
     let dummyInfo = this.state.dummyInfo.filter(p => {
       if(p.username.includes(e.target.value)) {
         return p;

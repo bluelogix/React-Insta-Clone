@@ -1,16 +1,36 @@
 import React from 'react'
+import styled from 'styled-components';
+
+
+const CommentInfo = styled.div`
+font-size: 20px;
+text-align: left;
+`;
+
+const User = styled.div`
+font-weight: bold;
+
+`;
+
+const Comment = styled.div`
+padding-bottom: 20px;
+`;
+
 
 
 
 function Comments(props) {
     return (
-      <div>
-           {props.comment.username}
-          <p> {props.comment.text}</p>
+          <CommentInfo>
+            <User>
+           {props.comment.username}</User>
           
+         
+            <Comment> {props.comment.text} </Comment>
+            
+          </CommentInfo>
 
-
-        </div> // end div
+          
   
   
     )}

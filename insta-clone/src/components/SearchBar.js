@@ -1,10 +1,42 @@
 
 import React from 'react'
 import './SearchBar.css'
+import styled from 'styled-components';
+
+
+const Img = styled.img`
+    z-index: -1;
+    position: relative;
+    top: 20px;
+    padding-left: 20px;
+`;
+
+
+
+
+const SearchBars = styled.div`
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+`;
+
+
+// const Input = styled.div`
+// //    padding: 20px;
+// border: 2px solid red;
+// `;
+
+
+
+
+
+
 
 function SearchBar(props) {
     return (
-        <div className="searchBar">
+        <SearchBars>
 
           
            <div className="insta">
@@ -12,12 +44,13 @@ function SearchBar(props) {
             {/* <p> | </p> */}
             
 
-            <img  src="https://miro.medium.com/max/960/1*XwGT5sRK8L-lYPMeQkUgog.png" width="100" alt="instaimg" />
+            <Img src="https://miro.medium.com/max/960/1*XwGT5sRK8L-lYPMeQkUgog.png" width="100" alt="instaimg" />
             </div>
          
 
            <div>
-            <input 
+
+            <input
              type="text"
              className="searchTerm" 
              placeholder="Search" 
@@ -34,7 +67,7 @@ function SearchBar(props) {
                 <i className="far fa-user"></i>
              </div>
 
-        </div> // End Div
+             </SearchBars>
 
     )}      
   export default SearchBar;

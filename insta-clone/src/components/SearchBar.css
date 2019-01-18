@@ -1,17 +1,2 @@
 
 
-.insta img{
-    padding-left: 20px;
-}
-
-
-
-
-.searchBar {
-    display: flex;
-    justify-content: space-around;
-    height: 70px;
-    border-bottom: 1px solid lightgray;
-    align-items: center;
-
-}

@@ -1,7 +1,19 @@
 // import React  from 'react';
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Comments from './Comments'
+
+
+
+const Input = styled.input`
+width:97%;
+padding: 20px 10px;
+font-size: 20px;
+border: none;
+border-top: 1px solid gray;
+`;
+
 
 
 
@@ -51,7 +63,7 @@ class CommentSection extends Component {
                 })}
 
             <form onSubmit={this.addNewComment}>
-                <input  
+                <Input 
                 value={this.state.comment} 
                 onChange={this.handleChanges} 
                 name="text" 

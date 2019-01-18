@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PostsPage from './components/PostContainer/PostsPage';
 import authenticate from './components/Authentication/authenticate'
 import LoginPage from './components/Login/Login'
-
 import './App.css';
 
 
@@ -29,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div >
       <PostsPage />
       
       </div>

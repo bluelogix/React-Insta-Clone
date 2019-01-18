@@ -1,38 +1,89 @@
 import React from 'react'
 import './PostContainer.css'
-
+import Likes from './Likes'
+import styled from 'styled-components';
 import CommentSection from '../CommentContainer/CommentSection'
 
-function Post(props) {
+
+
+
+const PostDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #D3D3D3;
+  margin: 20px 25%;
+  width: 50%;
+  
+
+`;
+
+const PostTop = styled.span`
+  position: relative;
+  z-index: -1;
+  bottom: 40px;
+  padding: 0 60px;
+  
+  font-weight: bold;
+
+`;
+
+
+const PostThumb = styled.img`
+   border-radius: 100%;
+   padding: 10px;
+   width: 5%;
+   height: 5%;
+`;
+
+
+
+
+
+class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      likes: props.likes
+    }
+  }
+
+addLikes = () => {
+  let likes = this.state.likes + 1;
+  this.setState({likes})
+};
+
+
+
+
+
+
+  render() {
     return (
-      <div className="post">
-        <div> 
-            <img className="thumbimg" src={props.post.thumbnailUrl} alt="thumbnail" />
-            <p>{props.post.username}</p>
-        </div>
+      <PostDiv>
+        
+          
+            <PostThumb alt="thumbnail" src={this.props.post.thumbnailUrl}  />
+            <PostTop>
+             <span>{this.props.post.username}</span>
+          </PostTop>
+      
+      
+          <img src={this.props.post.imageUrl} alt="imageurl" />
+       
 
-        <div>
-          <img src={props.post.imageUrl} alt="imageurl" />
-        </div>
+        
+        <Likes likes={this.state.likes} addLikes={this.addLikes} />
 
-        <div>
-        <i className="far fa-heart"></i>
-        <i className="far fa-comment"></i>
-        </div>
-
-        <p>{props.post.likes} likes</p>
-
-
-
-        <CommentSection  comments={props.post.comments} />
+        
+        <CommentSection  comments={this.props.post.comments} />
 
 
-        <p>{props.post.timestamp}</p>
+        <p>{this.props.post.timestamp}</p>
         
   
   
-         </div> // end div
+        </PostDiv>// end div
     )}
-
+    }
   export default Post;
   
