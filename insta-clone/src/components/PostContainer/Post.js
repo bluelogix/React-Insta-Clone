@@ -1,5 +1,5 @@
 import React from 'react'
-import './PostContainer.css'
+
 import Likes from './Likes'
 import styled from 'styled-components';
 import CommentSection from '../CommentContainer/CommentSection'

@@ -1,6 +1,6 @@
 
 import React from 'react'
-import './SearchBar.css'
+
 import styled from 'styled-components';
 
 
@@ -23,10 +23,9 @@ const SearchBars = styled.div`
 `;
 
 
-// const Input = styled.div`
-// //    padding: 20px;
-// border: 2px solid red;
-// `;
+const Input = styled.input`
+   padding: 10px 20px;
+`;
 
 
 
@@ -48,18 +47,18 @@ function SearchBar(props) {
             </div>
          
 
-           <div>
+           
 
-            <input
+            <Input
              type="text"
              className="searchTerm" 
              placeholder="Search" 
              value={props.addSearch}/>
              
-                <button type="submit" className="searchButton">
+                {/* <button type="submit" className="searchButton">
                     <i className="fa fa-search"></i>
                 </button>
-           </div>
+                 */}
 
             <div>
                 <i className="far fa-compass"></i>
